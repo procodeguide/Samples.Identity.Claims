@@ -1,0 +1,26 @@
+﻿@model Post
+@{
+    ViewData["Title"] = "Post Details";
+}
+<h1>@ViewData["Title"]</h1>
+
+<br />
+
+<table class="table table-responsive table-hover">
+    <tr>
+        <td><span style="font-weight:bold">Id</span></td>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <td><span style="font-weight:bold">Title</span></td>
+        <td>@Model.Title</td>
+    </tr>
+    <tr>
+        <td><span style="font-weight:bold">Description</span></td>
+        <td>@Model.Description</td>
+    </tr>
+    <tr>
+        <td><span style="font-weight:bold">Created On</span></td>
+        <td>@Model.CreatedOn</td>
+    </tr>
+</table>

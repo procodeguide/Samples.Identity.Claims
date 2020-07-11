@@ -1,0 +1,23 @@
+﻿@model List<Post>
+@{
+    ViewData["Title"] = "View All Posts";
+}
+<h1>@ViewData["Title"]</h1>
+
+<table class="table table-responsive table-hover">
+    <tr>
+        <td>Id</td>
+        <td>Description</td>
+        <td>Created On</td>
+        <td></td>
+    </tr>
+    @foreach (Post post in Model)
+    {
+        <tr>
+            <td>@post.Id</td>
+            <td>@post.Description</td>
+            <td>@post.CreatedOn</td>
+            <td>@Html.ActionLink("View Details", "Details", new { id = post.Id })</td>
+        </tr>
+    }
+</table>
